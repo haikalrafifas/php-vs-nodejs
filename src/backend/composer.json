@@ -1,0 +1,14 @@
+{
+    "name": "reactphp-vs-nodejs/reactphp-test",
+    "description": "ReactPHP test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "haikalrafifas",
+            "email": "haikalrafifas@github.com"
+        }
+    ],
+    "require": {
+        "react/http": "^1.9"
+    }
+}

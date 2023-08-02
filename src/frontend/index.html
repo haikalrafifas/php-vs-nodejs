@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrency Test</title>
+</head>
+<body>
+    <div class="welcome">
+        <h1>Hello World!</h1>
+        <div class="api">
+            <mark>/api/test</mark> says:
+            <p><b id="api-result"></b></p>
+            <button id="api-refresh">Refresh</button>
+        </div>
+    </div>
+    <script>
+        const result = document.getElementById("api-result");
+        const refresh = document.getElementById("api-refresh");
+        const loading = (state) => {
+            return result.innerText = state === true ? "loading..." : state;
+        };
+        const testAPI = () => {
+            loading(true);
+            fetch("/api/test")
+            .then(response => response.json())
+            .then(data => loading(data.message))
+            .catch(error => result.innerText = error);
+        };
+        loading(true);
+        refresh.onclick = testAPI;
+        testAPI();
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+Summary:
+  Total:        21.1285 secs
+  Slowest:      19.9750 secs
+  Fastest:      0.3967 secs
+  Average:      1.5514 secs
+  Requests/sec: 581.7729
+
+  Total data:   2750 bytes
+  Size/request: 0 bytes
+
+Response time histogram:
+  0.397 [1]     |
+  2.355 [11792] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  4.312 [72]    |
+  6.270 [72]    |
+  8.228 [12]    |
+  10.186 [61]   |
+  12.144 [15]   |
+  14.102 [16]   |
+  16.059 [19]   |
+  18.017 [56]   |
+  19.975 [14]   |
+
+
+Latency distribution:
+  10% in 1.0338 secs
+  25% in 1.1634 secs
+  50% in 1.3312 secs
+  75% in 1.5175 secs
+  90% in 1.7014 secs
+  95% in 1.9177 secs
+  99% in 10.1650 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:   0.0300 secs, 0.3967 secs, 19.9750 secs
+  DNS-lookup:   0.0521 secs, 0.0000 secs, 0.5824 secs
+  req write:    0.0020 secs, 0.0000 secs, 0.4117 secs
+  resp wait:    1.0246 secs, 0.0339 secs, 19.2763 secs
+  resp read:    0.0290 secs, 0.0000 secs, 0.7670 secs
+
+Status code distribution:
+  [200] 12020 responses
+  [500] 110 responses
+
+Error distribution:
+  [52]  Get "http://localhost/api/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  [110] Get "http://localhost/api/": dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it.
